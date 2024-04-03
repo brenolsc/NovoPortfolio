@@ -1,0 +1,182 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #FF4500;
+}
+
+
+.section {
+    padding: 20px 0;
+}
+
+.project {
+    margin-bottom: 20px;
+    width: calc(25% - 20px);
+    /* Define a largura de cada projeto para ocupar 25% da largura da tela com 20px de margem entre eles */
+    margin-right: 20px;
+    /* Margem direita de 20px para todos os projetos, exceto o último */
+    float: left;
+    /* Faz com que os projetos fiquem lado a lado */
+}
+
+.project:nth-child(4n) {
+    margin-right: 0;
+    /* Remove a margem direita do último projeto de cada linha */
+}
+
+/* Corrige margem direita para todos os projetos exceto o último */
+.project:not(:last-child) {
+    margin-right: 20px;
+}
+
+.window {
+    background-color: #333;
+    padding: 20px;
+    position: relative;
+    border: 2px solid #111;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.window:hover {
+    background-color: #444;
+}
+
+.buttons {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.buttons span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.buttons span.close {
+    background-color: #ff5f56;
+}
+
+.buttons span.minimize {
+    background-color: #ffbd2e;
+}
+
+.buttons span.maximize {
+    background-color: #27c93f;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Círculo para a foto de perfil */
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+}
+
+.language img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#curriculo {
+    clear: both;
+}
+
+.project {
+    width: calc(25% - 20px);
+    margin-right: 20px;
+}
+
+.profile-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-text h2 {
+    margin: 0;
+}
+
+/* Modificações para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .project {
+        width: calc(50% - 20px);
+        /* Define a largura de cada projeto para ocupar 50% da largura da tela com 20px de margem entre eles */
+        margin-right: 20px;
+        /* Margem direita de 20px para todos os projetos, exceto o último */
+        float: none;
+        /* Remove a flutuação dos projetos */
+    }
+
+    .project:nth-child(2n) {
+        margin-right: 0;
+        /* Remove a margem direita do último projeto de cada linha */
+    }
+
+    .window {
+        width: 150%;
+        /* Aumentando a largura da janela para ocupar 90% da tela */
+    }
+}
